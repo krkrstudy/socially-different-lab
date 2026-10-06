@@ -25,6 +25,16 @@ Then visit `http://localhost:4173`.
 - Team portraits: `assets/team/`
 - Shared resource link: search for `disk.pku.edu.cn` in `index.html`
 
+## Design references (October 2026 review)
+
+The revision uses [Academic Pages](https://github.com/academicpages/academicpages.github.io)
+and [HugoBlox Academic CV](https://github.com/HugoBlox/hugo-theme-academic-cv) as references
+for readable academic content, profile links, publication lists, and research participation.
+The implementation remains plain HTML/CSS/JavaScript; no template code was copied.
+Section accents (magenta, blue, teal, purple, and orange) follow the visual references supplied
+by the lab, with lighter backgrounds and darker text for readability.
+Lab inquiries: cli.psy.lin.lab@pku.edu.cn.
+
 ## Content sources
 
 - [Muyu Lin's official Peking University profile](https://www.psy.pku.edu.cn/szdw/qzjy/jsyjy/lmy/index.htm)
