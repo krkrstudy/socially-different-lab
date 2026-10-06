@@ -842,8 +842,8 @@ a {
 }
 
 .method-list li:hover {
-  padding-left: 16px;
-  background: rgba(255, 255, 255, 0.035);
+  padding-left: 0;
+  background: transparent;
 }
 
 .method-list > li > span {
@@ -2536,4 +2536,153 @@ body[data-language="zh"] .theme-card h3 {
   .brand-copy strong { font-size: 17px; }
   .brand-copy small { font-size: 8px; letter-spacing: 0.08em; }
   body[data-language="zh"] .hero h1 { letter-spacing: -0.08em; }
+}
+
+/* Review update: section-based color accents, readable bilingual typography.
+   Structure references: Academic Pages and HugoBlox Academic CV (see README). */
+:root {
+  --paper: #f6f8f7;
+  --white: #ffffff;
+  --accent-magenta: #a72f7d;
+  --accent-blue: #315d9e;
+  --accent-teal: #167f79;
+  --accent-purple: #6854a4;
+  --accent-orange: #a8540a;
+  --coral-deep: var(--accent-teal);
+}
+html { scroll-padding-top: 100px; }
+.hero {
+  background: radial-gradient(ellipse at 88% 72%, #f4e5ef 0%, transparent 35%),
+    radial-gradient(ellipse at 15% 90%, #dae8f7 0%, transparent 45%),
+    linear-gradient(125deg, #f5faf6, #dfefe6);
+}
+.hero h1 { line-height: 1.12; font-size: clamp(56px, 5.1vw, 74px); }
+.hero h1 em { margin-top: 18px; font-size: .48em; font-style: normal; color: var(--accent-teal); letter-spacing: 0; }
+.hero h1 .title-line { white-space: normal; }
+.map-center { background: #dfc6e7; color: #3e315e; }
+.map-node { background: #edf6f4; }
+.node-a { background: #f5deeb; color: #8a2867; }
+.node-b { background: #deebfa; color: #234c86; }
+.node-c { background: #d7eeea; color: #175e59; }
+.node-d { background: #ffe6cf; color: #8b4408; }
+.hero-foot span:nth-child(1) { color: var(--accent-magenta); }
+.hero-foot span:nth-child(2) { color: var(--accent-blue); }
+.hero-foot span:nth-child(3) { color: var(--accent-teal); }
+.hero-foot span:nth-child(4) { color: var(--accent-purple); }
+.section-index { color: var(--accent-blue); font-size: 12px; letter-spacing: .1em; line-height: 1.6; }
+.manifesto-grid { grid-template-columns: .65fr 1.9fr .9fr; gap: 44px; }
+.manifesto-copy .display-quote { line-height: 1.22; font-size: clamp(32px, 3.1vw, 46px); }
+.principle-card { border-radius: 20px; background: #eef0fa; }
+.principle-flower { background: var(--accent-purple); }
+.principle-card p { font-size: 22px; line-height: 1.4; white-space: pre-line; }
+.language-option.is-active { color: var(--accent-teal); }
+.section-heading h2, .approach h2, .culture-heading h2, .join h2 { line-height: 1.14; }
+.section-heading .eyebrow { margin-bottom: 22px; }
+.research .section-heading h2 { color: var(--accent-magenta); }
+.theme-card { border-radius: 18px; min-height: 410px; }
+.theme-coral { background: #f6e4ef; color: #6e2854; }
+.theme-blue { background: #e3edfb; color: #23467b; }
+.theme-green { background: #dff0eb; color: #195c55; }
+.theme-cream { background: #fff0df; color: #7b460f; }
+.theme-card h3 { line-height: 1.15; font-size: clamp(30px, 3vw, 42px); }
+.theme-card:hover { transform: none; box-shadow: none; }
+.theme-card .tag-list li { border-color: currentColor; background: rgba(255,255,255,.45); }
+.theme-symbol { opacity: .6; }
+.participate { background: #fff; border-top: 1px solid var(--line); }
+.participate h2 { color: var(--accent-blue); font-size: clamp(40px, 4.8vw, 64px); }
+.participation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.participation-card { padding: 36px; border-radius: 18px; background: #eaf2fc; }
+.participation-card:nth-child(2) { background: #fff0df; }
+.participation-icon { display: grid; place-items: center; width: 46px; height: 46px; background: #315d9e; color: white; border-radius: 14px; font-size: 28px; }
+.participation-card:nth-child(2) .participation-icon { background: #a8540a; }
+.participation-card h3 { font-size: 26px; margin: 22px 0 14px; line-height: 1.4; }
+.participation-card p { margin: 0 0 28px; }
+.participation-card a { display: inline-block; font-weight: 600; text-decoration: underline; text-underline-offset: 6px; }
+.participation-card a:hover { color: var(--accent-blue); }
+.approach { background: #223b46; }
+.method-list { cursor: default; }
+.method-list li { transition: none; }
+.method-list > li > span { color: #aadbd3; }
+.method-list h3 { font-size: 30px; line-height: 1.35; }
+.method-list p { color: rgba(255,255,255,.73); }
+.team .section-heading h2 { color: var(--accent-purple); }
+.pi-copy { padding: 52px; }
+.pi-copy h3 { line-height: 1.16; font-size: clamp(40px, 4.8vw, 64px); }
+.pi-links { flex-wrap: wrap; }
+.publications { background: #342b55; }
+.culture-heading h2 { color: var(--accent-magenta); }
+.value-card { border-top: 4px solid var(--accent-magenta); }
+.value-card:nth-child(2) { border-color: var(--accent-blue); }
+.value-card:nth-child(3) { border-color: var(--accent-teal); }
+.value-card:nth-child(4) { border-color: var(--accent-orange); }
+.value-card > span { background: #f4dbe9; }
+.value-card:nth-child(2) > span { background: #dce9fa; }
+.value-card:nth-child(3) > span { background: #d4ece6; }
+.value-card:nth-child(4) > span { background: #ffe6cb; }
+.resource-card { background: linear-gradient(120deg, #e8e4f7, #e2f1ed); border-radius: 18px; }
+.resource-copy strong { line-height: 1.16; }
+.join-card { background: radial-gradient(ellipse at 90% 20%, #4a3763, transparent 50%), #233d43; border-radius: 18px; }
+.join-note { color: rgba(255,255,255,.72); }
+.footer-col a { overflow-wrap: anywhere; }
+.footer-grid { gap: 30px; }
+body[data-language="zh"] h1,
+body[data-language="zh"] h2,
+body[data-language="zh"] h3,
+body[data-language="zh"] .display-quote,
+body[data-language="zh"] .resource-copy strong,
+body[data-language="zh"] .principle-card p {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-weight: 500; letter-spacing: 0; line-height: 1.42;
+}
+body[data-language="zh"] .hero h1 { font-size: clamp(42px, 4.5vw, 64px); letter-spacing: 0; line-height: 1.35; }
+body[data-language="zh"] .hero h1 em { font-family: inherit; font-size: .55em; letter-spacing: 0; font-style: normal; margin-top: 14px; }
+body[data-language="zh"] .section-heading h2,
+body[data-language="zh"] .approach h2,
+body[data-language="zh"] .culture h2,
+body[data-language="zh"] .join h2 { font-size: clamp(36px, 3.6vw, 52px); letter-spacing: 0; line-height: 1.42; text-wrap: balance; }
+body[data-language="zh"] .display-quote { font-size: clamp(28px, 2.8vw, 40px); line-height: 1.55; }
+body[data-language="zh"] .theme-card h3 { font-size: clamp(27px, 2.8vw, 36px); word-break: normal; }
+body[data-language="zh"] .pi-copy h3 { font-size: 48px; }
+body[data-language="zh"] .resource-copy strong { font-size: clamp(32px, 3.4vw, 48px); }
+body[data-language="zh"] .profile-content h2 { font-size: 38px; }
+body[data-language="zh"] .brand-copy strong { font-family: inherit; font-size: 20px; }
+body[data-language="zh"] .method-list h3 { line-height: 1.6; font-size: 26px; }
+body[data-language="zh"] .eyebrow { letter-spacing: .08em; }
+@media (min-width: 821px) and (max-width: 1100px) {
+  .nav-shell { width: calc(100% - 32px); }
+  .site-nav { gap: 12px; font-size: 12px; }
+  .brand-copy strong { font-size: 18px; }
+  body[data-language="zh"] .brand-copy strong { font-size: 17px; }
+  .language-toggle { margin-left: 12px; }
+}
+@media (max-width: 820px) {
+  .manifesto-grid { grid-template-columns: 1fr; gap: 28px; }
+  .principle-card { max-width: none; }
+  .site-nav { margin-left: 0; }
+  .hero h1 { font-size: clamp(48px, 8vw, 68px); }
+  .pi-copy { padding: 36px 28px; }
+  .participation-card { padding: 28px; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: clamp(39px, 10.5vw, 60px); }
+  .hero h1 em { font-size: .53em; }
+  .section-heading h2, .approach h2, .culture-heading h2 { font-size: 42px; }
+  .participation-grid { grid-template-columns: 1fr; }
+  .participation-card { padding: 28px 24px; }
+  .principle-card { padding: 28px; }
+  .method-list h3 { font-size: 25px; }
+  .hero-visual { min-height: 365px; }
+  .theme-card { min-height: 370px; }
+  .pi-photo { min-height: 360px; }
+  .resource-card { padding: 36px 24px; }
+  .brand-copy { max-width: 195px; }
+  body[data-language="zh"] .brand-copy strong { font-size: 16px; }
+  body[data-language="zh"] .hero h1 { font-size: clamp(34px, 9vw, 48px); }
+  body[data-language="zh"] .section-heading h2,
+  body[data-language="zh"] .approach h2,
+  body[data-language="zh"] .culture h2,
+  body[data-language="zh"] .join h2 { font-size: 34px; }
+  body[data-language="zh"] .display-quote { font-size: 28px; }
+  body[data-language="zh"] .resource-copy strong { font-size: 34px; }
+  .join-card { padding: 56px 24px; }
 }
